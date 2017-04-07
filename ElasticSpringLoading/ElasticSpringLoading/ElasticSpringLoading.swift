@@ -140,8 +140,12 @@ class ElasticSpringLoading: UIView ,CAAnimationDelegate{
         bounceBall()
         self.textView.animate()
         DispatchQueue.global().asyncAfter(deadline: .now() + BallDownTime) {
-          self.timer =   Timer.scheduledTimer(withTimeInterval: (2 * BallDownTime + TextBounceDuration), repeats: true) { [weak self] (timer)  in
-                self?.switchShapLayer()
+            if #available(iOS 10.0, *) {
+                self.timer =   Timer.scheduledTimer(withTimeInterval: (2 * BallDownTime + TextBounceDuration), repeats: true) { [weak self] (timer)  in
+                    self?.switchShapLayer()
+                }
+            } else {
+                self.timer = Timer.scheduledTimer(timeInterval:(2 * BallDownTime + TextBounceDuration) , target: self, selector:#selector(self.switchShapLayer), userInfo: nil, repeats: true)
             }
            
            self.timer!.fire()
