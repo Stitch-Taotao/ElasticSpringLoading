@@ -49,7 +49,7 @@ animateView.attriString = newAttriString
 
 ## 有事儿的话联系我
 
-#### 可以关注下我的简书，我发布过的文章有问题的话，评论指出哈，这非常有意义。
+可以关注下[我的简书](http://www.jianshu.com/users/59df4965d888)，我发布过的文章有问题的话，评论指出哈，这非常有意义。
 
 ## 许可
 
