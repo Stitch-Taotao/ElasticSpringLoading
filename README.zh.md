@@ -35,7 +35,7 @@ animateView.attriString = newAttriString
 
 ## 安装
 
-**目前只手动安装233...**
+**目前只支持手动安装233...**
 
 1. 下载最新版本的代码
 2. 打开你的工程，把`ElasticSpringLoading`文件夹拖进你的工程。确保你选择Copy item
