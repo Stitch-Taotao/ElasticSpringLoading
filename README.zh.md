@@ -6,7 +6,8 @@ ElasticSpringLoading 是一个简单的模拟文字弹簧效果。灵感来自�
 #### [English illustrate](README.md)
 
 
-##![效果图](bounceBall.gif)
+![效果图](bounceBall.gif)
+
 
 ##要求
 
@@ -37,6 +38,7 @@ animateView.attriString = newAttriString
 1. 下载最新版本的代码
 2. 打开你的工程，把`ElasticSpringLoading`文件夹拖进你的工程。确保你选择Copy item
 3. 重新编译项目
+
 
 ##参与
 

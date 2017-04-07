@@ -9,7 +9,7 @@ ElasticSpringLoading is a sample simulated text spring effect . Inspired by [不
 ##### [中文说明](README.zh.md) 
 
 
-##![screenshots](bounceBall.gif)
+![Screenshots](bounceBall.gif)
 
 
 ## Requirements
@@ -42,6 +42,7 @@ animateView.attriString = newAttriString
 1. Download the latest code version 
 2. Open your project in Xcode,drag the `ElasticSpringLoading` folder into your project.  Make sure to select Copy items when asked if you extracted the code archive outside of your project.
 3. Build your project
+
 
 ##Contributing
 
