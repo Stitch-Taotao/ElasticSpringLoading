@@ -2,4 +2,4 @@
 
 
 
-!这是效果图(/Users/i_mt/Music/MySelf/ElasticSpringLoading/bounceBall.gif)
+![这是效果图](bounceBall.gif)
