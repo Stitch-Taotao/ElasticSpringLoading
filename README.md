@@ -44,7 +44,7 @@ animateView.attriString = newAttriString
 3. Build your project
 
 
-##Contributing
+## Contributing
 
 Contributors are more than welcome.Pull your request 
 
