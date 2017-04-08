@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
         
         DispatchQueue.main.asyncAfter(deadline:.now() + 10) {
-            self.animateView.stopAnimtate()
+           // self.animateView.stopAnimtate()
         }
     }
     

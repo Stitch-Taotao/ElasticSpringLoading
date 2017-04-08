@@ -69,7 +69,8 @@ class MtTextView: UIView {
        //高度设置为40  距离底部15
        startView.center.x = bounds.size.width/2.0-suggestSize.width/2.0
        startView.center.y = bounds.size.height - 15
-       //由于计算的不太准确，多加了10
+       
+       
        endView.center.x = bounds.size.width/2.0 + suggestSize.width/2.0
        endView.center.y = bounds.size.height - 15
        
@@ -85,6 +86,7 @@ class MtTextView: UIView {
         let frameSetter = CTFramesetterCreateWithAttributedString(mutableStr)
         
         //获得要绘制区域的高度
+        //10000是有参考的： http://stackoverflow.com/questions/3374591/ctframesettersuggestframesizewithconstraints-sometimes-returns-incorrect-size
         let restricSize = CGSize.init(width:bounds.size.width, height:10000)
         let coreTextSize = CTFramesetterSuggestFrameSizeWithConstraints(frameSetter,CFRangeMake(0, 0), nil, restricSize, nil)
         return coreTextSize
@@ -222,6 +224,7 @@ extension MtTextView{
     }
     
     func offset(atDistance distance:CGFloat ,fromPoint:CGPoint ,offset:CGFloat) -> CGFloat {
+    //这不是个很好的做法，不过性能在本例中还说得过去
         let kStep:CGFloat = 0.001
         var newDistance :CGFloat = 0.0
         var newOffset = offset + kStep

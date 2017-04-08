@@ -76,9 +76,7 @@ class ElasticSpringLoading: UIView ,CAAnimationDelegate{
 //        pentagram.backgroundColor = UIColor.yellow.cgColor
 
     }
-    func setFrame() {
-        
-    }
+  
     // #MARK: - PATH
     func roundPath() ->UIBezierPath {
         let ovalPath = UIBezierPath(ovalIn: CGRect.init(x: 4, y: 4, width: 32, height: 32))
@@ -183,29 +181,30 @@ class ElasticSpringLoading: UIView ,CAAnimationDelegate{
     
     
      func bounceBall()  {
-     let period = 2*BallDownTime + TextBounceDuration
-     let keyAnimation = CAKeyframeAnimation(keyPath: "position.y")
-     keyAnimation.values = [0,h-20 - backView.bounds.size.height / 2.0,0]
-     keyAnimation.duration = BallDownTime * 2
-     keyAnimation.isAdditive = true
-     keyAnimation.timingFunctions = [CAMediaTimingFunction.init(controlPoints: 0.6, 0.08, 0.91, 0.4),CAMediaTimingFunction.init(controlPoints: 0.08, 0.6, 0.4,0.91)]
-     keyAnimation.delegate = self
-     let group1 = CAAnimationGroup()
-     group1.duration = period
-     group1.repeatCount = Float.infinity
-     group1.animations = [keyAnimation]
-     backView.layer.add(group1, forKey: "drop")
      
-        
-     let rotateAniamtion = CAKeyframeAnimation(keyPath: "transform.rotation.z")
-     //时间决定一个合适的角度
-     rotateAniamtion.values = [0, M_PI * (period / (0.9))]
-     rotateAniamtion.duration = period
-     rotateAniamtion.beginTime = CACurrentMediaTime() + BallDownTime
-     rotateAniamtion.repeatCount = Float.infinity
-     rotateAniamtion.autoreverses = true
-    // rotateAniamtion.beginTime =
-     backView.layer.add(rotateAniamtion, forKey: "rotate")
+         let period = 2*BallDownTime + TextBounceDuration
+         let keyAnimation = CAKeyframeAnimation(keyPath: "position.y")
+         keyAnimation.values = [0,h-20 - backView.bounds.size.height / 2.0,0]
+         keyAnimation.duration = BallDownTime * 2
+         keyAnimation.isAdditive = true
+         keyAnimation.timingFunctions = [CAMediaTimingFunction.init(controlPoints: 0.6, 0.08, 0.91, 0.4),CAMediaTimingFunction.init(controlPoints: 0.08, 0.6, 0.4,0.91)]
+         keyAnimation.delegate = self
+         let group1 = CAAnimationGroup()
+         group1.duration = period
+         group1.repeatCount = Float.infinity
+         group1.animations = [keyAnimation]
+         backView.layer.add(group1, forKey: "drop")
+         
+            
+         let rotateAniamtion = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+         //时间决定一个合适的角度
+         rotateAniamtion.values = [0, M_PI * (period / (0.9))]
+         rotateAniamtion.duration = period
+         rotateAniamtion.beginTime = CACurrentMediaTime() + BallDownTime
+         rotateAniamtion.repeatCount = Float.infinity
+         rotateAniamtion.autoreverses = true
+         // rotateAniamtion.beginTime =
+         backView.layer.add(rotateAniamtion, forKey: "rotate")
 
 
 /*
